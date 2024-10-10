@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from __future__ import division, print_function
+
 """Sets up standard key bindings for each platform.
 Supplements Tk's defaults and handles readonly text widgets.
 

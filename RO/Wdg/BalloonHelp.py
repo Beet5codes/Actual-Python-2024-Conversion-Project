@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from __future__ import division, print_function
+
 """Simple implementation of pop-up help.
 
 Call enableBalloonHelp to activate help for all widgets that have a helpText attribute.
@@ -42,7 +42,7 @@ class _BalloonHelp:
         self._leaveTimer = Timer()
         self._msgWin = tkinter.Toplevel()
         self._msgWin.overrideredirect(True)
-        self._msgWdg = Tkinter.Message(self._msgWin, bg="light yellow")
+        self._msgWdg = tkinter.Message(self._msgWin, bg="light yellow")
         self._msgWdg.pack()
         self._msgWin.withdraw()
         self._msgWdg.bind_all('<Motion>', self._start)
@@ -125,7 +125,7 @@ def enableBalloonHelp(delayMS = 1000):
 
 
 if __name__ == '__main__':
-    import OptionMenu
+    from . import OptionMenu
     root = tkinter.Tk()
     
     l0 = tkinter.Label(text="Data")

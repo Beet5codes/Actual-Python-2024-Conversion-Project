@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from __future__ import division, print_function
+
 """
 A widget showing a set of options as checkbuttons.
 
@@ -36,12 +36,12 @@ History:
 __all__ = ['OptionButtons']
 
 import RO.InputCont
-import Button
-import Checkbutton
-import InputContFrame
-import Label
+from . import Button
+from . import Checkbutton
+from . import InputCF
+from . import Label
 
-class OptionButtons(InputContFrame.InputContFrame):
+class OptionButtons(InputCF.InputContFrame):
     def __init__ (self,
         master,
         name,
@@ -90,7 +90,7 @@ class OptionButtons(InputContFrame.InputContFrame):
             The default format is RO.InputCont.BasicFmt.
         **kargs: keyword arguments for Frame
         """
-        InputContFrame.InputContFrame.__init__(self, master, **kargs)
+        InputCF.InputContFrame.__init__(self, master, **kargs)
 
         # optional header
         if headerText:
@@ -178,11 +178,11 @@ class OptionButtons(InputContFrame.InputContFrame):
             wdg.pack(side="top", anchor="nw")
     
 if __name__ == "__main__":
-    import PythonTk
+    from . import PythonTk
     root = PythonTk.PythonTk()
 
     def doPrint():
-        print("getString() = %r" % (optFrame.getString(),))
+        print(("getString() = %r" % (optFrame.getString(),)))
     
     def setEnable(wdg=None):
         optFrame.setEnable(enableButton.getBool())

@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from __future__ import absolute_import, division, print_function
+
 """Tkinter utilities
 
 History:
@@ -174,7 +174,7 @@ def getWindowingSystem():
 
 class TclFunc:
     """Register a python function as a tcl function.
-    Based on tkinter's _register method (which, being private,
+    Based on Tkinter's _register method (which, being private,
     I prefer not to use explicitly).
     
     If the function call fails, a traceback is printed.

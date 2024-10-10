@@ -1,4 +1,4 @@
-from __future__ import absolute_import, division, print_function
+
 """A dictionary that is automatically persisted to a file
 
 Useful for managing saved configurations and similar purposes.
@@ -8,7 +8,7 @@ History:
 """
 __all__ = ["SavedDict"]
 
-import collections
+import collections.abc as collections
 import json
 import os.path
 
