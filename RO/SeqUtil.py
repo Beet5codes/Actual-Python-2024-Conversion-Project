@@ -30,7 +30,7 @@ History:
 2007-04-24 ROwen    Changed Numeric to numpy in a doc string.
 2010-06-28 ROwen    Modified to require Python 2.4 by assuming set is a builtin type.
 """
-from collections import UserString
+import collections
 import RO.MathUtil
 
 def asCollection(item):
